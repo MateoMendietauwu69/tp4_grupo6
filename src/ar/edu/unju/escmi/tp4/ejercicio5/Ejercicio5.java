@@ -10,7 +10,7 @@ public class Ejercicio5 {
     public static void main (String [] args ) {
         TreeMap<Integer, Producto> productos = new TreeMap<>();
         Scanner scanner = new Scanner(System.in);
-        int op;
+        int op = 0;
         do{
             System.out.println("-----Menú-----");
             System.out.println(" 1 - Alta de producto");
@@ -32,7 +32,7 @@ public class Ejercicio5 {
                     System.out.println("Ingrese clave del producto (número entero): ");
                     int cl = scanner.nextInt();
                     scanner.nextLine();
-                    if(productos.containsKey(cl))System.out.println("Ya existe un producto con esa clave")
+                    if(productos.containsKey(cl))System.out.println("Ya existe un producto con esa clave");
                     else{
                         System.out.println("Ingrese descripción del producto: ");
                         String desc = scanner.nextLine();
@@ -88,7 +88,7 @@ public class Ejercicio5 {
                     System.out.println("Opcion invalida");
                     break;
             }
-        }while(op!= 5);
+        } while (op != 5);
         scanner.close();
     }
 }
